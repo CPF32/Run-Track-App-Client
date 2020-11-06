@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Run-Trak</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,47 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
-    </body>
+      <div id="wrap">
+        <div id="regbar">
+          <div id="navthing">
+            <h2><a href="#" id="loginform">Login</a> | <a href="#">Register</a></h2>
+            <div class="login">
+              <div class="formholder">
+                <div class="randompad">
+                   <fieldset>
+                     <label for="email">Email:</label>
+                     <input type="email" name=credentials[email] placeholder="Email" />
+
+                     <label for="password">Password:</label>
+                     <input type="password" name=credentials[password] placeholder="Password" />
+
+                     <input type="submit" value="Login" />
+                   </fieldset>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="Register">
+              <div class="formholder">
+                <div class="randompad">
+                   <fieldset>
+                     <label for="email">Email:</label>
+                     <input type="email" name="credentials[email]" placeholder="Email" />
+
+                     <label for="password">Password:</label>
+                     <input type="password" name=credentials[password] placeholder="Password"/>
+
+                     <label for="password-confirm">Confirm Password:</label>
+                     <input type="password" name=credentials[password_confirmation] placeholder="Password"/>
+
+                     <input type="submit" value="Register" />
+                   </fieldset>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+      <h1>Run-Trak</h1>
+  </body>
 </html>
