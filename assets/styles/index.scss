@@ -44,14 +44,15 @@ fieldset {
   border: 0;
 }
 
-.login {
+.login,
+.register {
   display: none;
   position: relative;
   width: 350px;
 }
 
 .formholder {
-  background: #ecf0f1;
+  background: #ecf0f8;
   border-radius: 5px;
   padding-top: 5px;
   width: 350px;
