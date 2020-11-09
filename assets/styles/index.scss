@@ -44,8 +44,10 @@ fieldset {
   border: 0;
 }
 
+.changepassword,
 .login,
-.register {
+.register,
+.signout {
   display: none;
   position: relative;
   width: 350px;
