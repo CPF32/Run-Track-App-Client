@@ -28,6 +28,10 @@ const signInSuccess = (response) => {
   $('.login').hide()
   $('#signoutanchor').show()
   $('#changepasswordanchor').show()
+  $('#addrun').show()
+  $('#editrun').show()
+  $('#postlogin').show()
+  $('#prelogin').hide()
 }
 
 const signInFailure = () => {
@@ -47,6 +51,10 @@ const signOutSuccess = () => {
   $('.signout').hide()
   $('#loginanchor').show()
   $('#registeranchor').show()
+  $('#addrun').hide()
+  $('#editrun').hide()
+  $('#postlogin').hide()
+  $('#prelogin').show()
 }
 
 const signOutFailure = () => {

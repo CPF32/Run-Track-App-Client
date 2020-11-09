@@ -1,5 +1,6 @@
 'use strict'
 const authEvents = require('./auth/events')
+const appEvents = require('./app/events')
 
 $(() => {
   $('input[type="submit"]').mousedown(() => {
@@ -74,7 +75,12 @@ $(() => {
   $('#loginform').on('submit', authEvents.signInEvent)
   $('#signoutform').on('submit', authEvents.signOutEvent)
   $('#changepasswordform').on('submit', authEvents.changePasswordEvent)
+  $('#addrun').on('click', appEvents.addRunEvent)
+  $('#editrun').on('click', appEvents.editRunEvent)
 
   $('#signoutanchor').hide()
   $('#changepasswordanchor').hide()
+  $('#addrun').hide()
+  $('#editrun').hide()
+  $('#postlogin').hide()
 })
