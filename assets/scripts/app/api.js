@@ -34,7 +34,7 @@ const editRun = (data) => {
 const indexRun = (data) => {
   return $.ajax({
     url: config.apiUrl + '/index',
-    method: 'POST',
+    method: 'GET',
     data: data
   })
 }

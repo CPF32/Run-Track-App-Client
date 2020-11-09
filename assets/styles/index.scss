@@ -189,3 +189,57 @@ a {
     color: #1abc9c;
   }
 }
+
+
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.tbl-header {
+  background-color: rgba(255,255,255,0.3);
+ }
+
+.tbl-content {
+  border: 1px solid rgba(255,255,255,0.3);
+  height: 300px;
+  margin-top: 0px;
+  overflow-x: auto;
+}
+
+th {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 20px 15px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+td {
+  border-bottom: solid 1px rgba(255,255,255,0.1);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 300;
+  padding: 15px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+section {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+/* for custom scrollbar for webkit browser*/
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
