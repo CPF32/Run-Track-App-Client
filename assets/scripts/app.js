@@ -9,21 +9,24 @@ $(() => {
     $(this).css('background', '#1abc9c')
   })
 
-  $('#loginform').click(() => {
+  $('#loginanchor').click(() => {
     $('.login').fadeToggle('slow')
     $(this).toggleClass('green')
+    $('#message2').text('')
   })
-  $('#registerform').click(() => {
+  $('#registeranchor').click(() => {
     $('.register').fadeToggle('slow')
     $(this).toggleClass('green')
+    $('#message1').text('')
   })
-  $('#changepasswordform').click(() => {
+  $('#changepasswordanchor').click(() => {
     $('.changepassword').fadeToggle('slow')
     $(this).toggleClass('green')
   })
-  $('#signoutform').click(() => {
+  $('#signoutanchor').click(() => {
     $('.signout').fadeToggle('slow')
     $(this).toggleClass('green')
+    $('#message3').text('')
   })
   $(document).mouseup((e) => {
     const container = $('.login')
@@ -31,6 +34,9 @@ $(() => {
     if (!container.is(e.target) && container.has(e.target).length === 0) {
       container.hide()
       $('#loginform').removeClass('green')
+      $('#message1').text('')
+      $('#message2').text('')
+      $('#loginform').trigger('reset')
     }
   })
   $(document).mouseup((e) => {
@@ -39,6 +45,9 @@ $(() => {
     if (!container.is(e.target) && container.has(e.target).length === 0) {
       container.hide()
       $('#registerform').removeClass('green')
+      $('#message1').text('')
+      $('#message2').text('')
+      $('#registerform').trigger('reset')
     }
   })
   $(document).mouseup((e) => {
@@ -47,6 +56,8 @@ $(() => {
     if (!container.is(e.target) && container.has(e.target).length === 0) {
       container.hide()
       $('#changepasswordform').removeClass('green')
+      $('#message3').text('')
+      $('#changepasswordform').trigger('reset')
     }
   })
   $(document).mouseup((e) => {
@@ -55,6 +66,7 @@ $(() => {
     if (!container.is(e.target) && container.has(e.target).length === 0) {
       container.hide()
       $('#signoutform').removeClass('green')
+      $('#message3').text('')
     }
   })
 
@@ -63,6 +75,6 @@ $(() => {
   $('#signoutform').on('submit', authEvents.signOutEvent)
   $('#changepasswordform').on('submit', authEvents.changePasswordEvent)
 
-  $('#signoutform').hide()
-  $('#changepasswordform').hide()
+  $('#signoutanchor').hide()
+  $('#changepasswordanchor').hide()
 })

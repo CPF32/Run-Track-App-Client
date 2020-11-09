@@ -5,6 +5,7 @@ const api = require('./api')
 
 const signUpEvent = (event) => {
   event.preventDefault()
+  console.log('made it')
 
   const form = event.target
   const data = getFormFields(form)

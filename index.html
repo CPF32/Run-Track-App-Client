@@ -4,6 +4,9 @@
       <title>Run-Trak</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
+      <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@700&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
+
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
@@ -15,18 +18,21 @@
       <div id="wrap">
         <div id="regbar">
           <div id="navthing">
-            <h2><a href="#" id="loginform">Login</a> | <a href="#" id="registerform">Register</a></h2>
+            <h2><a href="#" id="loginanchor">Login</a><a href="#" id="signoutanchor">Sign Out</a> | <a href="#" id="changepasswordanchor">Change Password</a><a href="#" id="registeranchor">Register</a></h2>
             <div class="login">
               <div class="formholder">
                 <div class="randompad">
                    <fieldset>
-                     <label for="email">Email:</label>
-                     <input type="email" name=credentials[email] placeholder="Email" />
+                     <form id="loginform" action="index.html" method="post">
+                       <label id = "message1"></label>
+                       <label for="email">Email:</label>
+                       <input type="email" name="credentials[email]" placeholder="Email" />
 
-                     <label for="password">Password:</label>
-                     <input type="password" name=credentials[password] placeholder="Password" />
+                       <label for="password">Password:</label>
+                       <input type="password" name="credentials[password]" placeholder="Password" />
 
-                     <input type="submit" value="Login" />
+                       <input type="submit" value="Login" />
+                     </form>
                    </fieldset>
                 </div>
               </div>
@@ -35,44 +41,46 @@
               <div class="formholder">
                 <div class="randompad">
                    <fieldset>
-                     <label for="email">Email:</label>
-                     <input type="email" name="credentials[email]" placeholder="Email" />
+                     <form id="registerform" action="index.html" method="post">
+                       <label id = "message2"></label>
+                       <label for="email">Email:</label>
+                       <input type="email" name="credentials[email]" placeholder="Email" />
 
-                     <label for="password">Password:</label>
-                     <input type="password" name=credentials[password] placeholder="Password"/>
+                       <label for="password">Password:</label>
+                       <input type="password" name="credentials[password]" placeholder="Password"/>
 
-                     <label for="password-confirm">Confirm Password:</label>
-                     <input type="password" name=credentials[password_confirmation] placeholder="Password"/>
+                       <label for="password-confirm">Confirm Password:</label>
+                       <input type="password" name="credentials[password_confirmation]" placeholder="Password"/>
 
-                     <input type="submit" value="Register" />
+                       <input type="submit" value="Register" />
+                     </form>
                    </fieldset>
                 </div>
               </div>
             </div>
-            <h2><a href="#" id="signoutform">Sign Out</a><a href="#" id="changepasswordform">Change Password</a></h2>
             <div class="signout">
-              <div class="formholder">
-                <div class="randompad">
+              <div class="formholder2">
                   <fieldset>
-                    <input type="submit" value="Sign Out Confirmation" />
+                    <form id="signoutform" action="index.html" method="post">
+                      <input type="submit" value="Sign Out Confirmation" />
+                    </form>
                   </fieldset>
-                </div>
               </div>
             </div>
             <div class="changepassword">
               <div class="formholder">
                 <div class="randompad">
                    <fieldset>
-                     <label for="password">Old Password:</label>
-                     <input type="password" name=passwords[oldpw] placeholder="Old Password" />
+                     <form id="changepasswordform" action="index.html" method="post">
+                       <label id = "message3"></label>
+                       <label for="password">Old Password:</label>
+                       <input type="password" name="passwords[old]" placeholder="Old Password" />
 
-                     <label for="password">New Password:</label>
-                     <input type="password" name=passwords[newpw] placeholder="New Password" />
+                       <label for="password">New Password:</label>
+                       <input type="password" name="passwords[new]" placeholder="New Password" />
 
-                     <label for="password">Confirm New Password:</label>
-                     <input type="password" name=passwords[newpw] placeholder="New Password" />
-
-                     <input type="submit" value="Change Password" />
+                       <input type="submit" value="Change Password" />
+                     </form>
                    </fieldset>
                 </div>
               </div>
@@ -81,6 +89,14 @@
         </div>
       </div>
 
+      <br>
       <h1>Run-Trak</h1>
+      <br>
+      <div class="buttons">
+        <button id='addrun' type="button">Add Run</button><button id='editrun' type="button">Edit Run</button>
+      </div>
+      <br>
+      <h3>Recent Community Runs</h3>
+
   </body>
 </html>
