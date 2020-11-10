@@ -76,10 +76,11 @@ $(() => {
   $('#signoutform').on('submit', authEvents.signOutEvent)
   $('#changepasswordform').on('submit', authEvents.changePasswordEvent)
 
-  $('#addfinal').on('click', appEvents.addRunEvent)
-  $('#editfinal').on('click', appEvents.editRunEvent)
-  $('#deletefinal').on('click', appEvents.deleteRunEvent)
+  $('#addmodalform').on('submit', appEvents.addRunEvent)
+  $('#editmodalform').on('submit', appEvents.editRunEvent)
+  $('#deletemodalform').on('submit', appEvents.deleteRunEvent)
 
+  $('#preloadtable').hide()
   $('#signoutanchor').hide()
   $('#changepasswordanchor').hide()
   $('#addrun').hide()

@@ -97,10 +97,9 @@
       <div class="space"></div>
 
       <h3 id="prelogin">Recent Community Runs</h3>
-      <h3 id="postlogin">User Run-Trak Collection</h3>
-      <section>
+      <section id="preloadtable">
         <div class="tbl-header">
-          <table cellpadding="0" cellspacing="0" border="0">
+          <table id="productBody" cellpadding="0" cellspacing="0" border="0">
             <thead>
               <tr>
                 <th>Run ID</th>
@@ -114,14 +113,30 @@
         </div>
         <div class="tbl-content">
           <table cellpadding="0" cellspacing="0" border="0">
-            <tbody>
+            <tbody id="runtablebody1">
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <h3 id="postlogin">User Run-Trak Collection</h3>
+      <section id="postloadtable">
+        <div class="tbl-header">
+          <table id="productBody" cellpadding="0" cellspacing="0" border="0">
+            <thead>
               <tr>
-                <td>ID</td>
-                <td>2020-11-12</td>
-                <td>5</td>
-                <td>5</td>
-                <td>Long Run</td>
+                <th>Run ID</th>
+                <th>Date</th>
+                <th>Distance (KM)</th>
+                <th>Pace (KM/H)</th>
+                <th>Description</th>
               </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="tbl-content">
+          <table cellpadding="0" cellspacing="0" border="0">
+            <tbody id="runtablebody2">
             </tbody>
           </table>
         </div>
@@ -145,29 +160,30 @@
               </button>
             </div>
             <div class="modal-body">
-              <form>
+              <form id="addmodalform">
                 <div class="form-row">
                   <div class="col-5">
-                    <input type="text" class="form-control" placeholder="Date (YYYY/MM/DD)">
+                    <input type="date" name="run[date]" class="form-control" placeholder="Date (YYYY/MM/DD)">
                   </div>
                   <div class="col">
-                    <input type="text" class="form-control" placeholder="Distance (km)">
+                    <input type="number" name="run[distance]" class="form-control" placeholder="Distance (km)">
                   </div>
                   <div class="col">
-                    <input type="text" class="form-control" placeholder="Pace (km/h)">
+                    <input type="number" name="run[pace]" class="form-control" placeholder="Pace (km/h)">
                   </div>
                 </div>
                 <br>
                 <div class="form-row">
                   <div class="col">
-                    <input type="text" class="form-control" placeholder="Description">
+                    <input type="text" name="run[description]" class="form-control" placeholder="Description">
                   </div>
                 </div>
+                <div class="modal-footer">
+                  <label id ="message4"></label>
+                  <input id="addfinal" type="submit" class="btn btn-primary"></>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
               </form>
-            </div>
-            <div class="modal-footer">
-              <button id="addfinal" type="button" class="btn btn-primary" >Add Run</button>
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
             </div>
           </div>
         </div>
@@ -184,35 +200,36 @@
               </button>
             </div>
             <div class="modal-body">
-              <form>
+              <form id="editmodalform">
                 <div class="form-row">
                   <div class="col">
                     <input type="text" class="form-control" placeholder="Run ID">
                   </div>
                   <div class="col">
-                    <input type="text" class="form-control" placeholder="Date (YYYY/MM/DD)">
+                    <input type="date" name="run[date]" class="form-control" placeholder="Date (YYYY/MM/DD)">
                   </div>
                 </div>
                 <br>
                 <div class="form-row">
                   <div class="col">
-                    <input type="text" class="form-control" placeholder="Distance (km)">
+                    <input type="number" name="run[distance]" class="form-control" placeholder="Distance (km)">
                   </div>
                   <div class="col">
-                    <input type="text" class="form-control" placeholder="Pace (km/h)">
+                    <input type="number" name="run[pace]" class="form-control" placeholder="Pace (km/h)">
                   </div>
                 </div>
                 <br>
                 <div class="form-row">
                   <div class="col">
-                    <input type="text" class="form-control" placeholder="Description">
+                    <input type="text" name="run[description]" class="form-control" placeholder="Description">
                   </div>
+                </div>
+                <div class="modal-footer">
+                  <label id ="message5"></label>
+                  <input id="editfinal" type="submit" class="btn btn-primary"></>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                 </div>
               </form>
-            </div>
-            <div class="modal-footer">
-              <button id="editfinal" type="button" class="btn btn-primary">Edit Run</button>
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
             </div>
           </div>
         </div>
@@ -229,17 +246,18 @@
               </button>
             </div>
             <div class="modal-body">
-              <form>
+              <form id="deletemodalform">
                 <div class="form-row">
                   <div class="col">
                     <input type="text" class="form-control" placeholder="Run ID">
                   </div>
                 </div>
+                <div class="modal-footer">
+                  <label id ="message6"></label>
+                  <input id="deletefinal" type="submit" class="btn btn-primary"></>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
               </form>
-            </div>
-            <div class="modal-footer">
-              <button id="deletefinal" type="button" class="btn btn-primary">Delete Run</button>
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
             </div>
           </div>
         </div>

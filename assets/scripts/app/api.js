@@ -4,15 +4,18 @@ const store = require('../store')
 
 const addRun = (data) => {
   return $.ajax({
-    url: config.apiUrl + '/create',
+    url: config.apiUrl + '/runs',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
     method: 'POST',
     data: data
   })
 }
 
-const deleteRun = () => {
+const deleteRun = (data) => {
   return $.ajax({
-    url: config.apiUrl + '/destroy',
+    url: config.apiUrl + '/runs/' + data.id,
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
@@ -22,7 +25,7 @@ const deleteRun = () => {
 
 const editRun = (data) => {
   return $.ajax({
-    url: config.apiUrl + '/update',
+    url: config.apiUrl + '/runs/' + data.id,
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
@@ -33,7 +36,7 @@ const editRun = (data) => {
 
 const indexRun = (data) => {
   return $.ajax({
-    url: config.apiUrl + '/index',
+    url: config.apiUrl + '/runs',
     method: 'GET',
     data: data
   })
