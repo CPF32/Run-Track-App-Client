@@ -30,6 +30,7 @@ const signInSuccess = (response) => {
   $('#changepasswordanchor').show()
   $('#addrun').show()
   $('#editrun').show()
+  $('#deleterun').show()
   $('#postlogin').show()
   $('#prelogin').hide()
 }
@@ -53,6 +54,7 @@ const signOutSuccess = () => {
   $('#registeranchor').show()
   $('#addrun').hide()
   $('#editrun').hide()
+  $('#deleterun').hide()
   $('#postlogin').hide()
   $('#prelogin').show()
 }

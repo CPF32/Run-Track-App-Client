@@ -77,10 +77,12 @@ $(() => {
   $('#changepasswordform').on('submit', authEvents.changePasswordEvent)
   $('#addrun').on('click', appEvents.addRunEvent)
   $('#editrun').on('click', appEvents.editRunEvent)
+  $('#deleterun').on('click', appEvents.deleteRunEvent)
 
   $('#signoutanchor').hide()
   $('#changepasswordanchor').hide()
   $('#addrun').hide()
   $('#editrun').hide()
+  $('#deleterun').hide()
   $('#postlogin').hide()
 })
