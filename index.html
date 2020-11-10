@@ -103,7 +103,8 @@
           <table cellpadding="0" cellspacing="0" border="0">
             <thead>
               <tr>
-                <th>Run</th>
+                <th>Run ID</th>
+                <th>Date</th>
                 <th>Distance (KM)</th>
                 <th>Pace (KM/H)</th>
                 <th>Description</th>
@@ -115,7 +116,8 @@
           <table cellpadding="0" cellspacing="0" border="0">
             <tbody>
               <tr>
-                <td>timestamp</td>
+                <td>ID</td>
+                <td>2020-11-12</td>
                 <td>5</td>
                 <td>5</td>
                 <td>Long Run</td>
@@ -126,9 +128,127 @@
       </section>
 
       <div class="buttons">
-        <button id='addrun' type="button">Add Run</button>
-        <button id='editrun' type="button">Edit Run</button>
-        <button id='deleterun' type="button">Delete Run</button>
+        <button id='addrun' type="button" class="btn btn-primary" data-toggle="modal" data-target="#addmodal">Add Run</button>
+        <button id='editrun' type="button" class="btn btn-primary" data-toggle="modal" data-target="#editmodal">Edit Run</button>
+        <button id='deleterun' type="button" class="btn btn-primary" data-toggle="modal" data-target="#deletemodal">Delete Run</button>
+      </div>
+
+          <!-- Modal -->
+      <div class="modal fade" id="addmodal" tabindex="-1" role="dialog" aria-labelledby="addmodaltitle"
+        aria-hidden="true">
+
+        <!-- Add .modal-dialog-centered to .modal-dialog to vertically center the modal -->
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="addModalLongTitle">Add New Run</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-row">
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Timestamp">
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Distance (KM)">
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Pace (KM/H)">
+                  </div>
+                </div>
+                <br>
+                <div class="form-row">
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Description">
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Add Run</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="editmodal" tabindex="-1" role="dialog" aria-labelledby="editmodaltitle"
+        aria-hidden="true">
+
+        <!-- Add .modal-dialog-centered to .modal-dialog to vertically center the modal -->
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="editModalLongTitle">Edit Run</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-row">
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Run ID">
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Timestamp">
+                  </div>
+                </div>
+                <br>
+                <div class="form-row">
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Distance (KM)">
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Pace (KM/H)">
+                  </div>
+                </div>
+                <br>
+                <div class="form-row">
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Description">
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Edit Run</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="deletemodal" tabindex="-1" role="dialog" aria-labelledby="deletemodaltitle"
+        aria-hidden="true">
+
+        <!-- Add .modal-dialog-centered to .modal-dialog to vertically center the modal -->
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="deleteModalLongTitle">Delete Run</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-row">
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Run ID">
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Delete Run</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+          </div>
+        </div>
       </div>
 
     </body>
