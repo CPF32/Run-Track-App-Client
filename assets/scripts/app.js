@@ -75,9 +75,10 @@ $(() => {
   $('#loginform').on('submit', authEvents.signInEvent)
   $('#signoutform').on('submit', authEvents.signOutEvent)
   $('#changepasswordform').on('submit', authEvents.changePasswordEvent)
-  $('#addrun').on('click', appEvents.addRunEvent)
-  $('#editrun').on('click', appEvents.editRunEvent)
-  $('#deleterun').on('click', appEvents.deleteRunEvent)
+
+  $('#addfinal').on('click', appEvents.addRunEvent)
+  $('#editfinal').on('click', appEvents.editRunEvent)
+  $('#deletefinal').on('click', appEvents.deleteRunEvent)
 
   $('#signoutanchor').hide()
   $('#changepasswordanchor').hide()
