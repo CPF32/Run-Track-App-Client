@@ -40,15 +40,21 @@ const editRunFailure = () => {
 }
 
 const indexRunSuccess = (response) => {
-  store.runs.forEach(run => {
-    $('#runtablebody1').prepend(
-      `<tr>
-      <td>${store.run._id}</td>
-      <td>${store.run.date}</td>
-      <td>${store.run.distance}</td>
-      <td>${store.run.pace}</td>
-      <td>${store.run.description}</td>
-      </tr>`)
+  const runs = response.runs
+
+  console.log(response.runs.length)
+
+  runs.forEach(run => {
+    const runHTML = (`
+      <tr>
+      <td>${response.run._id}</td>
+      <td>${response.run.date}</td>
+      <td>${response.run.distance}</td>
+      <td>${response.run.pace}</td>
+      <td>${response.run.description}</td>
+      </tr>`
+    )
+    $('#runtablebody2').prepend(runHTML)
   })
 }
 

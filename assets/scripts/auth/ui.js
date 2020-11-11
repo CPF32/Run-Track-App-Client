@@ -29,6 +29,7 @@ const signInSuccess = (response) => {
   $('#prelogin').hide()
   $('#postloadtable').show()
   $('#preloadtable').hide()
+  $('#runtablebody2').show()
 }
 
 const signInFailure = () => {
@@ -38,7 +39,6 @@ const signInFailure = () => {
 
 // SIGN-OUT HANDLERS
 const signOutSuccess = () => {
-  store.user = null
   $('#signoutanchor').hide()
   $('#changepasswordanchor').hide()
   $('.signout').hide()
