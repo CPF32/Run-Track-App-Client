@@ -1,57 +1,63 @@
 'use strict'
-const store = require('./../store')
+// const store = require('./../store')
 
 // ADD-RUN HANDLERs
 const addRunSuccess = (response) => {
-  store.run = response.run
+  const run = response.run
+
   $('#message4').text('')
-  // add to row
+
   $('#runtablebody2').prepend(
     `<tr>
-      <td>${store.run._id}</td>
-      <td>${store.run.date}</td>
-      <td>${store.run.distance}</td>
-      <td>${store.run.pace}</td>
-      <td>${store.run.description}</td>
+      <td>${run._id}</td>
+      <td>${run.date}</td>
+      <td>${run.distance}</td>
+      <td>${run.pace}</td>
+      <td>${run.description}</td>
     </tr>`)
 
   $('#addmodalform').trigger('reset')
 }
 
 const addRunFailure = () => {
-  $('#message4').text('Add Run Failed. Try Again')
+  $('#message4').text('Add Run Failed')
   $('#addmodalform').trigger('reset')
 }
 
 const deleteRunSuccess = (response) => {
+  $('#message6').text('')
 
+  $('#deletemodalform').trigger('reset')
 }
 
 const deleteRunFailure = () => {
+  $('#message6').text('Delete Run Failed')
 
+  $('#deletemodalform').trigger('reset')
 }
 
 const editRunSuccess = (response) => {
+  $('#message5').text('')
 
+  $('#editmodalform').trigger('reset')
 }
 
 const editRunFailure = () => {
-
+  $('#message5').text('Edit Run Failed')
+  $('#editmodalform').trigger('reset')
 }
 
 const indexRunSuccess = (response) => {
   const runs = response.runs
 
-  console.log(response.runs.length)
-
   runs.forEach(run => {
     const runHTML = (`
       <tr>
-      <td>${response.run._id}</td>
-      <td>${response.run.date}</td>
-      <td>${response.run.distance}</td>
-      <td>${response.run.pace}</td>
-      <td>${response.run.description}</td>
+      <td>${run._id}</td>
+      <td>${run.date}</td>
+      <td>${run.distance}</td>
+      <td>${run.pace}</td>
+      <td>${run.description}</td>
       </tr>`
     )
     $('#runtablebody2').prepend(runHTML)
