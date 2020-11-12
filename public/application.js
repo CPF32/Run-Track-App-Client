@@ -3928,7 +3928,7 @@ module.exports = getFormFields;
 
 var apiUrl = void 0;
 var apiUrls = {
-  production: 'https://run-trak.herokuapp.com',
+  production: 'https://runtrak.herokuapp.com',
   development: 'http://localhost:4741'
 };
 
