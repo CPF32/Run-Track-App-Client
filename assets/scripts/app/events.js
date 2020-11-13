@@ -22,6 +22,8 @@ const deleteRunEvent = (event) => {
 
   api.deleteRun(data)
     .then(ui.deleteRunSuccess)
+    .then(api.indexRun)
+    .then(ui.indexRunSuccess)
     .catch(ui.deleteRunFailure)
 }
 
@@ -33,6 +35,8 @@ const editRunEvent = (event) => {
 
   api.editRun(data)
     .then(ui.editRunSuccess)
+    .then(api.indexRun)
+    .then(ui.indexRunSuccess)
     .catch(ui.editRunFailure)
 }
 

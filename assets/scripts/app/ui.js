@@ -16,6 +16,7 @@ const addRunSuccess = (response) => {
       <td>${run.description}</td>
     </tr>`)
 
+  $('#message4').text('Add Run Success')
   $('#addmodalform').trigger('reset')
 }
 
@@ -27,6 +28,7 @@ const addRunFailure = () => {
 const deleteRunSuccess = (response) => {
   $('#message6').text('')
 
+  $('#message6').text('Delete Run Success')
   $('#deletemodalform').trigger('reset')
 }
 
