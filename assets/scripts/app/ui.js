@@ -53,6 +53,8 @@ const editRunFailure = () => {
 const indexRunSuccess = (response) => {
   const runs = response.runs
 
+  $('#runtablebody2').html('')
+
   runs.forEach(run => {
     const runHTML = (`
       <tr>

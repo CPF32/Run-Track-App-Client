@@ -34,14 +34,13 @@ const editRun = (data) => {
   })
 }
 
-const indexRun = (data) => {
+const indexRun = () => {
   return $.ajax({
     url: config.apiUrl + '/runs',
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
-    method: 'GET',
-    data: data
+    method: 'GET'
   })
 }
 
