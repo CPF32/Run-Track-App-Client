@@ -41,6 +41,7 @@ const deleteRunFailure = () => {
 const editRunSuccess = (response) => {
   $('#message5').text('')
 
+  $('#message5').text('Edit Run Success')
   $('#editmodalform').trigger('reset')
 }
 

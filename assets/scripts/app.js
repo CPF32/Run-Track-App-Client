@@ -80,6 +80,37 @@ $(() => {
   $('#editmodalform').on('submit', appEvents.editRunEvent)
   $('#deletemodalform').on('submit', appEvents.deleteRunEvent)
 
+  $(document).mouseup((e) => {
+    const container = $('#addmodal')
+
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+      container.hide()
+      $('#addmodalform').removeClass('green')
+      $('#message4').text('')
+      $('#addmodalform').trigger('reset')
+    }
+  })
+  $(document).mouseup((e) => {
+    const container = $('#editmodal')
+
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+      container.hide()
+      $('#editmodalform').removeClass('green')
+      $('#message5').text('')
+      $('#editmodalform').trigger('reset')
+    }
+  })
+  $(document).mouseup((e) => {
+    const container = $('#deletemodal')
+
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+      container.hide()
+      $('#deletemodalform').removeClass('green')
+      $('#message6').text('')
+      $('#deletemodalform').trigger('reset')
+    }
+  })
+
   $('#preloadtable').hide()
   $('#signoutanchor').hide()
   $('#changepasswordanchor').hide()
