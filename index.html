@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Run-Trak</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@700&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <div id="wrap">
+        <div id="regbar">
+          <div id="navthing">
+            <h2><a href="#" id="loginanchor">Login</a>
+              <a href="#" id="signoutanchor">Sign Out</a> |
+              <a href="#" id="changepasswordanchor">Change Password</a>
+              <a href="#" id="registeranchor">Register</a>
+            </h2>
+            <div class="login">
+              <div class="formholder">
+                <div class="randompad">
+                   <fieldset>
+                     <form id="loginform" action="index.html" method="post">
+                       <label id = "message1"></label>
+                       <label for="email">Email:</label>
+                       <input type="email" name="credentials[email]" placeholder="Email" />
+
+                       <label for="password">Password:</label>
+                       <input type="password" name="credentials[password]" placeholder="Password" />
+
+                       <input type="submit" value="Login" />
+                     </form>
+                   </fieldset>
+                </div>
+              </div>
+            </div>
+            <div class="register">
+              <div class="formholder">
+                <div class="randompad">
+                   <fieldset>
+                     <form id="registerform" action="index.html" method="post">
+                       <label id = "message2"></label>
+                       <label for="email">Email:</label>
+                       <input type="email" name="credentials[email]" placeholder="Email" />
+
+                       <label for="password">Password:</label>
+                       <input type="password" name="credentials[password]" placeholder="Password"/>
+
+                       <label for="password-confirm">Confirm Password:</label>
+                       <input type="password" name="credentials[password_confirmation]" placeholder="Password"/>
+
+                       <input type="submit" value="Register" />
+                     </form>
+                   </fieldset>
+                </div>
+              </div>
+            </div>
+            <div class="signout">
+              <div class="formholder2">
+                  <fieldset>
+                    <form id="signoutform" action="index.html" method="post">
+                      <input type="submit" value="Sign Out Confirmation" />
+                    </form>
+                  </fieldset>
+              </div>
+            </div>
+            <div class="changepassword">
+              <div class="formholder">
+                <div class="randompad">
+                   <fieldset>
+                     <form id="changepasswordform" action="index.html" method="post">
+                       <label id ="message3"></label>
+                       <label for="password">Old Password:</label>
+                       <input type="password" name="passwords[old]" placeholder="Old Password" />
+
+                       <label for="password">New Password:</label>
+                       <input type="password" name="passwords[new]" placeholder="New Password" />
+
+                       <input type="submit" value="Change Password" />
+                     </form>
+                   </fieldset>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h1>Run-Trak</h1>
+      <div class="space"></div>
+
+      <h3 id="prelogin">Recent Community Runs</h3>
+      <section id="preloadtable">
+        <div class="tbl-header">
+          <table id="productBody" cellpadding="0" cellspacing="0" border="0">
+            <thead>
+              <tr>
+                <th>Run ID</th>
+                <th>Date</th>
+                <th>Distance (KM)</th>
+                <th>Pace (KM/H)</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="tbl-content">
+          <table cellpadding="0" cellspacing="0" border="0">
+            <tbody id="runtablebody1">
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <h3 id="postlogin">User Run-Trak Collection</h3>
+      <section id="postloadtable">
+        <div class="tbl-header">
+          <table id="productBody" cellpadding="0" cellspacing="0" border="0">
+            <thead>
+              <tr>
+                <th>Run ID</th>
+                <th>Date</th>
+                <th>Distance (KM)</th>
+                <th>Pace (KM/H)</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="tbl-content">
+          <table cellpadding="0" cellspacing="0" border="0">
+            <tbody id="runtablebody2">
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <div class="buttons">
+        <button id='addrun' type="button" class="btn btn-primary" data-toggle="modal" data-target="#addmodal">Add Run</button>
+        <button id='editrun' type="button" class="btn btn-primary" data-toggle="modal" data-target="#editmodal">Edit Run</button>
+        <button id='deleterun' type="button" class="btn btn-primary" data-toggle="modal" data-target="#deletemodal">Delete Run</button>
+      </div>
+
+          <!-- Modal -->
+      <div class="modal fade" id="addmodal" tabindex="-1" role="dialog" aria-labelledby="addmodaltitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="addModalLongTitle">Add New Run</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form id="addmodalform">
+                <div class="form-row">
+                  <div class="col-5">
+                    <input type="date" name="run[date]" class="form-control" placeholder="Date (YYYY/MM/DD)">
+                  </div>
+                  <div class="col">
+                    <input type="number" name="run[distance]" class="form-control" placeholder="Distance (km)">
+                  </div>
+                  <div class="col">
+                    <input type="number" name="run[pace]" class="form-control" placeholder="Pace (km/h)">
+                  </div>
+                </div>
+                <br>
+                <div class="form-row">
+                  <div class="col">
+                    <input type="text" name="run[description]" class="form-control" placeholder="Description">
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <label id ="message4"></label>
+                  <input id="addfinal" type="submit" class="btn btn-primary"></>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="editmodal" tabindex="-1" role="dialog" aria-labelledby="editmodaltitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="editModalLongTitle">Edit Run</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form id="editmodalform">
+                <div class="form-row">
+                  <div class="col">
+                    <input type="text" name="id" class="form-control" placeholder="Run ID">
+                  </div>
+                  <div class="col">
+                    <input type="date" name="run[date]" class="form-control" placeholder="Date (YYYY/MM/DD)">
+                  </div>
+                </div>
+                <br>
+                <div class="form-row">
+                  <div class="col">
+                    <input type="number" name="run[distance]" class="form-control" placeholder="Distance (km)">
+                  </div>
+                  <div class="col">
+                    <input type="number" name="run[pace]" class="form-control" placeholder="Pace (km/h)">
+                  </div>
+                </div>
+                <br>
+                <div class="form-row">
+                  <div class="col">
+                    <input type="text" name="run[description]" class="form-control" placeholder="Description">
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <label id ="message5"></label>
+                  <input id="editfinal" type="submit" class="btn btn-primary"></>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="deletemodal" tabindex="-1" role="dialog" aria-labelledby="deletemodaltitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="deleteModalLongTitle">Delete Run</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form id="deletemodalform">
+                <div class="form-row">
+                  <div class="col">
+                    <input type="text" name="id" class="form-control" placeholder="Run ID">
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <label id ="message6"></label>
+                  <input id="deletefinal" type="submit" class="btn btn-primary"></>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </body>
+</html>
