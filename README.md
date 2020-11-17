@@ -40,7 +40,7 @@ implement, but I got every core aspect completed which I am happy with.
 
 My future goals for this project would be:
   - Mobile friendly (improve dynamic nature of the UI)
-  - add community run feature to frontpage
+  - Add community run feature to frontpage
 
 - - - -
 
