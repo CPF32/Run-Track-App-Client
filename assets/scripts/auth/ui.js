@@ -29,7 +29,7 @@ const signInSuccess = (response) => {
   $('#prelogin').hide()
   $('#postloadtable').show()
   $('#preloadtable').hide()
-  $('#runtablebody2').show()
+  // $('#runtablebody2').show()
 }
 
 const signInFailure = () => {
@@ -51,6 +51,7 @@ const signOutSuccess = () => {
   $('#prelogin').show()
   $('#postloadtable').hide()
   $('#preloadtable').show()
+  $('#runtablebody2').html('')
 }
 
 const signOutFailure = () => {
