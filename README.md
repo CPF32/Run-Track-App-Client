@@ -10,7 +10,7 @@ Back-End Repo: https://github.com/CPF32/Run-Track-App
 
 ## Planning and Development
 My plan for this application was to make a user friendly tracker for runs.
-As a running enthusiast having a community of runners who can track and share
+As a running enthusiast, having a community of runners who can track and share
 their progress can really help motivate you in your running journey!
 
 
