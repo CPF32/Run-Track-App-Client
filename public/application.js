@@ -16988,6 +16988,7 @@ var signOutSuccess = function signOutSuccess() {
   $('#prelogin').show();
   $('#postloadtable').hide();
   $('#preloadtable').show();
+  $('#runtablebody2').html('');
 };
 
 var signOutFailure = function signOutFailure() {
