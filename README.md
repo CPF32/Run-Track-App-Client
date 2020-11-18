@@ -62,6 +62,7 @@ My future goals for this project would be:
 #### Logged Out
   - Sign up nav bar dropdown
   - Sign in nav bar dropdown
+  - Community run table
 
 #### Logged In
   - Change password nav bar dropdown
