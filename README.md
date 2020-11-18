@@ -71,4 +71,5 @@ My future goals for this project would be:
   - Add/Edit/Delete run buttons (modal forms)
 
 #### Original Image
-![Hand Sketched Wireframe](https://user-images.githubusercontent.com/69026929/99465692-8bf8a880-2900-11eb-8b41-20e53e43e4ed.jpg)
+![Hand Sketched Wireframe P1](https://user-images.githubusercontent.com/69026929/99465692-8bf8a880-2900-11eb-8b41-20e53e43e4ed.jpg)
+![Hand Sketched Wireframe P2](https://user-images.githubusercontent.com/69026929/99465699-8e5b0280-2900-11eb-89b7-1aa8d75479f0.jpg)
